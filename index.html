@@ -1,0 +1,336 @@
+<head>
+  <!-- Link to Prism CSS for syntax highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism.css" rel="stylesheet" />
+
+  <!-- Link to Prism JS for syntax highlighting functionality -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"></script>
+
+  <!-- Prism Language Extension for C# -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-csharp.min.js"></script>
+  <title>Open SVH - Home</title>
+</head>
+<style> 
+  .barcode-space {
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    color: #68664E;
+    width: 1000px;
+    margin: 9px auto;
+    text-shadow: 2px 0px #969370;
+  }
+  .title-img {
+    
+  }
+  .title-space {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    width: 980px;
+    margin: auto 0px;
+    height: 60px; /* Increased height for padding */
+    text-shadow: 4px 4px #413F37;
+    background-color: #969370;
+    padding: 10px 10px 20px; /* Added padding for more space */
+    box-shadow: inset 3px 3px #969370, inset 0px -8px #68664E ,4px 4px #68664E , -3px -3px #fff ;    
+  }
+
+   .spoiler {
+    background-color: #ECE9D8;
+    color: transparent;
+    user-select: none;
+    overflow: hidden;
+  }
+
+  .spoiler:hover {
+    background-color: inherit;
+    color: inherit;
+  }
+  
+  .spoiler span {
+    display: none;
+  }
+
+  .spoiler:hover span {
+    display: inline;
+  }
+  
+   .alert {
+    background-color: #FFA500;
+    color: transparent;
+    user-select: none;
+    overflow: hidden;
+  }
+
+  .alert:hover {
+    background-color: inherit;
+    color: inherit;
+  }
+  
+  .alert span {
+    display: none;
+  }
+
+  .alert:hover span {
+    display: inline;
+  }
+.centre {
+  width: 0;
+  margin: 50px auto;
+  box-shadow: -7px -7px #969370;
+  overflow: hidden;
+  animation: stretchIn 1s ease-out forwards;
+}
+
+@keyframes stretchIn {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 1000px; /* Adjust this to the width you desire */
+  }
+}
+
+.centre p,
+.centre HEADER,
+.centre ul {
+  
+  width: 0;
+  animation: typeIn 2s steps(30) 1s forwards; /* Adjust steps as needed */
+}
+
+@keyframes typeIn {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* You can adjust specific font sizes for headers and paragraphs */
+
+
+  .content { 
+    background: #fff;
+    padding: 20px 40px 40px 10px; /* Added padding for better spacing */
+    box-shadow: inset 3px 3px #969370, inset -4px -4px #C9C6B7 ,4px 4px #68664E , -3px -3px #fff , inset -3px -3px #fff,inset -2px -2px #68664E;    
+    border: 8px solid #ECE9D8; 
+  }
+
+  .diamond-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-image: linear-gradient(45deg, #ECE9D8 25%, transparent 25%, transparent 75%, #ECE9D8 75%, #ECE9D8),
+                      linear-gradient(45deg, #ECE9D8 25%, transparent 25%, transparent 75%, #ECE9D8 75%, #ECE9D8);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    animation: marquee 2s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+      background-position: 0 40px, 20px 60px;
+    }
+    100% {
+      background-position: 40px 0px, 60px 20px;
+    }
+  }
+
+  BODY {
+    width: 100%;
+    background: #fff;
+    margin: 0;
+    line-height: 1.0em;
+    font-family: monospace;
+  }
+
+  HEADER {
+    padding: 25px 0px 0px 0px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 1.0em;
+    color: #120110;
+  }
+
+  h {
+    padding: 0px 0px 0px 0px;
+    line-height: 1.0em;
+    margin-left: 2.5em;
+    font-weight: bold;
+  }
+
+  p {
+    padding: 0px 0px 0px 0px;
+    line-height: 1.2em;
+    margin-left: 2.5em;
+  }
+
+</style>
+<style>
+  .code-block {
+    background-color: #2e2e2e;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .code-block pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .code-block code {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+  }
+</style>
+<div class="diamond-pattern"></div>
+<div class="centre">
+<div class="title-space" style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <img src="https://raw.githubusercontent.com/Open-SVH/Open-SVH-Img-Server/refs/heads/main/svh-logo.png" height="120px">
+</div>
+  <div class="content">
+    <HEADER>Basic Info</HEADER>
+    <br>
+    <p>Open SVH is a C# Console app designed to communicate with your Turbowarp project </p>
+    <p class="alert"><strong>HEAVY NOTICE: WHEN MAKING OPEN SVH PROJECTS, <span style="font-size: 30px; color: red;"><i>DO NOT CREATE MALWARE!</i></span>, THIS IS STRICTLY AGAINST THE RULES ON PUBLISHING PLUGINS, OR SENDING GAMES, ANY MALWARE YOU PUT IN IS NOT OUR RESPONSIBILITY, IT WILL BE YOUR RESPONSIBILITY <br><br>On The Computer Misuse Act 1990 makes creating, supplying, or obtaining articles (like malware) for use in computer misuse offenses illegal, carrying penalties of up to 10 years imprisonment and unlimited fines. </strong></p>
+
+    <HEADER>How It Works</HEADER>
+    <br>
+    <p>All on how this works are in a list:</p>
+    <br>
+    <ul>
+      <li>The App Launches</li>
+      <li>The App Creates a little HTTP server</li>
+      <li>App Sets the Server to <strong>http://localhost:8080</strong></li>
+      <li>Server Runs</li>
+      <li>Game Connects to Localhost</li>
+      <li>Game can send Requests like POST or GET requests</li>
+      <li><span class="spoiler">POST is regularly default and also use (requestBody) variable for defined Body command</span></li>
+      <li>App will recognise those requests from the server sending back to them</li>
+      <li>The App Would do the commands from the request type</li>
+      <li>The app sends a response</li>
+      <li>Game moves on from the request</li>
+    </ul>
+
+   <HEADER> Packages </HEADER>
+<br>
+<p>List of built-in packages</p>
+<br>
+<ul>
+  <li>SVH.HTTP (The Package for HTTP Stuff)</li>
+  <li>SVH.WWIS (Windows Wallpaper Interaction Script)</li>
+  <li>SVH.About (A Package to make an About page for your SVH Project for Debug Purposes to edit config files)</li>
+  <li>SVH.Directory (A Package for Directory Stuff)</li>
+  <li>SVH.Nitrogen (Keyboard Messer)</li>
+</ul>
+
+<HEADER> Rules </HEADER>
+<br>
+<p>Rules for publishing SVH Projects and Plugins</p>
+<br>
+<ul>
+  <li>Don't Use Directory.CreateDirectory, please use the <strong>SVH.Directory.CreateDirectory</strong> for safety.</li>
+  <li>When making plugins, please add as much safety as you can. Failing to do this will get your plugin rejected.</li>
+  <li>Ensure your plugin has proper error handling, including logging, to help debug issues.</li>
+  <li>All plugins must be tested thoroughly to ensure compatibility with the Open SVH framework.</li>
+  <li>Do not include any code that intentionally causes damage to the user's system or files.</li>
+  <li>Always provide clear documentation for your plugin's functionality and how to use it.</li>
+  <li>Be transparent about any external libraries or dependencies used in your plugin, and ensure they are properly licensed.</li>
+  <li>Maintain a clean code structure. Minimize unnecessary code and ensure your plugin is optimized for performance.</li>
+  <li>When using HTTP requests, ensure the server and data transfers are secured with proper encryption methods (e.g., HTTPS).</li>
+</ul>
+<HEADER> Example C# Code </HEADER>
+<br>
+<p>Here’s an example of C# code for setting up a basic HTTP Function: (This Has A Post Command to open command prompt and print "Hello World")</p>
+<br>
+<div class="code-block">
+<pre><code class="language-csharp">
+using System;
+using System.Net;
+using System.Text;
+
+namespace OpenSVH
+{
+    class Program
+    {
+        public static string OpenSVHDirectoryName = "OpenSVH";
+        public static readonly string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), OpenSVHDirectoryName);
+
+        static void Main(string[] args)
+        {
+            StartServer();
+        }
+
+        static void StartServer()
+        {
+            HttpListener listener = new HttpListener();
+            listener.Prefixes.Add("http://localhost:8080/");
+            listener.Start();
+            Console.WriteLine("OpenSVH Server started on http://localhost:8080/");
+
+            while (true)
+            {
+                HttpListenerContext context = listener.GetContext();
+                HandleRequest(context);
+            }
+        }
+
+        static void HandleRequest(HttpListenerContext context)
+        {
+            HttpListenerRequest request = context.Request;
+            HttpListenerResponse response = context.Response;
+
+            if (request.HttpMethod == "GET")
+            {
+                Console.WriteLine("Received GET request: " + request.Url);
+                SendResponse(response, "Hello from OpenSVH!");
+            }
+            else if (request.HttpMethod == "POST")
+            {
+                using (var reader = new System.IO.StreamReader(request.InputStream, request.ContentEncoding))
+                {
+                    string requestBody = reader.ReadToEnd();
+                    Console.WriteLine("Received POST data: " + requestBody);
+                    if (requestBody == "openCommandPrompt")
+                    {
+                        OpenSVH.Plugins.Nitrogen.KeyboardTyper.Search("cmd.exe", 100);
+                        OpenSVH.Plugins.Nitrogen.KeyboardTyper.Close();
+                        Task.Delay(1000).Wait();
+                        OpenSVH.Plugins.Nitrogen.KeyboardTyper.TypeWithEffect("echo Hello World!", 100); // Example command to type in CMD, adjust as needed
+                    }
+                    SendResponse(response, "Data received successfully.");
+                }
+            }
+            else
+            {
+                SendResponse(response, "Unsupported request method.", 405);
+            }
+        }
+
+        static void SendResponse(HttpListenerResponse response, string message, int statusCode = 200)
+        {
+            byte[] buffer = Encoding.UTF8.GetBytes(message);
+            response.StatusCode = statusCode;
+            response.ContentLength64 = buffer.Length;
+            response.OutputStream.Write(buffer, 0, buffer.Length);
+            response.OutputStream.Close();
+        }
+    }
+}
+</code></pre>
+</div>
+
+  </div>
+
+  <div class="barcode-space">Open SVH</div>
+</div>
